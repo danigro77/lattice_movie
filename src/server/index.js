@@ -1,9 +1,15 @@
 const express = require('express');
-const os = require('os');
+const helpers = require('./utils');
+const apiRoutes = require('../apiRoutes');
 
 const app = express();
-
+const { apiCall, movieURL } = helpers;
 app.use(express.static('dist'));
-app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
+
+app.get(apiRoutes.getPopular, (req, res) => {
+  apiCall(movieURL.getPopular())
+    .then(response => res.json(response))
+    .catch(error => res.send(error));
+});
 
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
