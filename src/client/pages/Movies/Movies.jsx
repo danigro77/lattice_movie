@@ -11,7 +11,7 @@ const Movies = () => {
       .then(res => setMovies(res));
   }, [apiRoutes]);
 
-  return (<></>);
+  return (<>Whee</>);
 };
 
 export default Movies;

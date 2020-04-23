@@ -14,5 +14,6 @@ module.exports = {
   },
   movieURL: {
     getPopular: () => `${MOVIE_DB}/popular?${KEY}`,
+    getMovie: id => `${MOVIE_DB}/${id}?${KEY}`,
   }
 };

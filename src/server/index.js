@@ -6,6 +6,12 @@ const app = express();
 const { apiCall, movieURL } = helpers;
 app.use(express.static('dist'));
 
+app.get(`${apiRoutes.getMovie}/:movieId`, (req, res) => {
+  apiCall(movieURL.getMovie(req.params.movieId))
+    .then(response => res.json(response))
+    .catch(error => res.send(error));
+});
+
 app.get(apiRoutes.getPopular, (req, res) => {
   apiCall(movieURL.getPopular())
     .then(response => res.json(response))
