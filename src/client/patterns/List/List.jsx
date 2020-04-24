@@ -11,7 +11,6 @@ const ListColumn = ({
   alignment
 }) => (
   <div
-    className={isHeader ? 'list-header' : 'list-item'}
     style={{ width, textAlign: alignment }}
   >
     { text }
@@ -26,7 +25,7 @@ ListColumn.defaultProps = {
 };
 
 ListColumn.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.string,
   isHeader: PropTypes.bool,
   alignment: PropTypes.oneOf(['left', 'right', 'center'])
@@ -35,7 +34,7 @@ ListColumn.propTypes = {
 const ListHeader = ({
   columns
 }) => (
-  <li>
+  <li className='list-header'>
     {
       columns.map((row) => {
         return (

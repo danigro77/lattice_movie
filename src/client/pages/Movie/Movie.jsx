@@ -13,7 +13,7 @@ const Movie = () => {
     fetch(uri)
       .then(res => res.json())
       .then(res => setMovie(res));
-  }, [apiRoutes]);
+  }, [apiRoutes, movieId]);
 
   return (<>{movie && movie.title}</>);
 };

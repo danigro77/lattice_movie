@@ -7,15 +7,17 @@
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  background: aliceblue;
+  border-radius: 15px;
+  border: lightgray 1px solid;
 }
 
 .list li:hover {
-  background: lightsteelblue;
+  border-color: lightsteelblue;
 }
 
 .list div {
-  padding: 5px;
+  padding: 5px 10px;
+  align-self: center;
 }
 
 .list a {
@@ -26,4 +28,5 @@
 .list .list-header {
   font-weight: bold;
   background: white;
+  border: none;
 }
