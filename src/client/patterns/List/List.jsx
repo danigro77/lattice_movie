@@ -6,7 +6,6 @@ import './styles.css';
 
 const ListColumn = ({
   text,
-  isHeader,
   width,
   alignment
 }) => (
@@ -19,7 +18,6 @@ const ListColumn = ({
 
 ListColumn.defaultProps = {
   text: '',
-  isHeader: false,
   width: 'auto',
   alignment: 'left',
 };
@@ -27,7 +25,6 @@ ListColumn.defaultProps = {
 ListColumn.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.string,
-  isHeader: PropTypes.bool,
   alignment: PropTypes.oneOf(['left', 'right', 'center'])
 };
 

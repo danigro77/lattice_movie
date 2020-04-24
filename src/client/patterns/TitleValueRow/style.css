@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.row-title {
+  font-weight: bold;
+  width: 150px;
+}

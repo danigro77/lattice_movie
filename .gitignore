@@ -5,4 +5,4 @@ dist
 yarn.lock
 .idea
 public/.DS_Store
-public/.DS_Store
+.env.local

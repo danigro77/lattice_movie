@@ -14,10 +14,13 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.3",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-icons": "^3.10.0",
     "react-router-dom": "^5.1.2",
     "request": "^2.88.2"
   },
