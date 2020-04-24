@@ -1,6 +1,6 @@
 const express = require('express');
 const helpers = require('./utils');
-const apiRoutes = require('../apiRoutes');
+const apiRoutes = require('./apiRoutes');
 
 const app = express();
 const { apiCall, movieURL } = helpers;

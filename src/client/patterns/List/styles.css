@@ -1,0 +1,29 @@
+.list {
+  padding: 0;
+  text-align: center;
+}
+.list li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  background: aliceblue;
+}
+
+.list li:hover {
+  background: lightsteelblue;
+}
+
+.list div {
+  padding: 5px;
+}
+
+.list a {
+  text-decoration: none;
+  color: black;
+}
+
+.list .list-header {
+  font-weight: bold;
+  background: white;
+}

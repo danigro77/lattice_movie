@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import * as apiRoutes from '../../../apiRoutes';
+
+import * as apiRoutes from '../../apiRoutes';
+import List from '../../patterns/List';
+
+import listColumns from './moviesList';
 
 
 const Movies = () => {
@@ -8,10 +12,15 @@ const Movies = () => {
   useEffect(() => {
     fetch(apiRoutes.getPopular)
       .then(res => res.json())
-      .then(res => setMovies(res));
+      .then(res => setMovies(res.results));
   }, [apiRoutes]);
 
-  return (<>Whee</>);
+  return (
+    <List
+      data={movies}
+      listConfig={listColumns}
+    />
+  );
 };
 
 export default Movies;

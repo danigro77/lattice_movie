@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import * as apiRoutes from '../../../apiRoutes';
+import * as apiRoutes from '../../apiRoutes';
 
 
 const Movie = () => {
